@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGP</title>
+    <link rel="stylesheet" href="/style/style1.css">
+</head>
+<body>
+    <form id="loginForm">
+        <img class="logo" src="/imagenes/logo SGP sin fondo.png" alt="logo">
+        <h3>Sistema de Gestión De Pólizas</h3>
+        <img src="/imagenes/User.png" alt="User-img">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" placeholder="Ingresa tu usuario aquí" required>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Ingresa tu contraseña aquí" required>
+        <div class="box-visible">
+            <input type="checkbox" id="visible">
+            <label for="visible">Mostrar contraseña</label>
+        </div>
+        <button type="submit" class="button">Iniciar sesión</button>
+        <div class="registrarse">
+            <a href="/index.html">Regresar</a>
+        </div>
+    </form>
+
+    <script src="/Login/autenticacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</body>
+</html>

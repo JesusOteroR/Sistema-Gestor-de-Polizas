@@ -1,0 +1,112 @@
+.navegacion {
+    background: #33426e;
+    color: #bbc5ce;
+}
+
+.menu {
+    background: #33426e;
+    color: #8997a5;
+}
+
+.opcion_menu {
+    color: #8997a5;
+}
+
+.main {
+    background: #f3f3f2;
+    color: #33426e;
+}
+
+.logo {
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.seccion {
+    background-image: linear-gradient(#f3f3f2, #bbc5ce);
+  
+}
+
+.selector {
+    background: #33426e;
+    border-radius: 6px;
+    color: #bbc5ce;
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.3));
+    
+}
+
+.botones {
+    background: #1f88e4;
+}
+
+.botones:hover {
+    background: #1c75d8;
+    cursor: pointer;
+}
+
+.pie {
+    background-image: linear-gradient(#f3f3f2, #bbc5ce, #bbc5ce, #bbc5ce);
+    color: #33426e;
+}
+
+.barra {
+    background: #bbc5ce;
+}
+
+.borde {
+    border-radius: 6px;
+}
+
+/* Asegúrate de que la card-body ocupa el ancho completo del contenedor */
+.card-body {
+    width: 100%;
+}
+
+/* Asegúrate de que el contenedor también ocupe el ancho completo */
+.container {
+    width: 100%;
+    max-width: 100%; /* Evita el desbordamiento en pantallas pequeñas */
+    padding: 0; /* Elimina el padding para ocupar el ancho completo */
+    margin: 0; /* Elimina el margen para evitar desplazamientos */
+}
+
+/* Asegúrate de que la tabla ocupe el ancho completo */
+.table {
+    width: 100%;
+    table-layout: fixed; /* Esto ayuda a que la tabla ocupe el ancho completo sin desbordarse */
+}
+
+/* Puedes ajustar el ancho de las columnas si es necesario */
+.table th, .table td {
+    text-align: center;
+    padding: 8px; /* Ajusta el padding si es necesario */
+    border: 1px solid #bbc5ce; /* Añade borde a las celdas */
+}
+
+
+
+.table tbody tr td.poco-cobertura {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Color de texto rojo oscuro */
+}
+
+.table tbody tr td.media-cobertura {
+    background-color: #fff3cd; /* Amarillo claro */
+    color: #856404; /* Color de texto amarillo oscuro */
+}
+
+.table tbody tr td.expirada {
+    background-color: #ff0000; /* Rojo claro como ejemplo */
+    color: #000000; /* Rojo oscuro para el texto */
+}
+
+.table-centered td {
+    text-align: center;
+    vertical-align: middle; /* Alineación vertical en el centro */
+}
+
+#paginacion {
+    display: flex;
+    justify-content: center; /* Centrar los botones */
+    margin-top: 20px; /* Añadir espacio superior */
+  }
+  

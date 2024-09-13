@@ -1,0 +1,57 @@
+.navegacion{
+    background: #33426e;
+    color: #bbc5ce;
+
+}
+.menu{
+    background: #33426e;
+    color: #8997a5;
+}
+.opcion_menu{
+    color: #8997a5;
+}
+.main{
+    background: #f3f3f2;
+    color: #33426e;
+}
+.logo{
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+.seccion{
+    background-image: linear-gradient(#f3f3f2, #bbc5ce );
+}
+.selector{
+    background: #33426e;
+    border-radius: 6px;
+    color: #bbc5ce;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+.botones{
+    background: #1f88e4;
+}
+
+.pie{
+    background-image: linear-gradient(#bbc5ce, #f3f3f2);
+    color: #33426e;
+}
+
+.carousel-item img {
+    opacity: 0.7; /* Ajusta este valor según tus necesidades */
+    transition: opacity 0.5s ease-in-out; /* Opcional: transición suave para el cambio de opacidad */
+  }
+  
+  .carousel-item img:hover {
+    opacity: 1; /* Opcional: opacidad completa al pasar el mouse */
+  }
+
+  .image-opacity {
+    opacity: 0.5; /* Ajusta el valor según tus necesidades */
+    transition: opacity 0.5s ease-in-out; /* Opcional: transición suave */
+  }
+  .image-opacity:hover {
+    opacity: 1; /* Opcional: opacidad completa al pasar el mouse */
+  }
+
+
+  
+  
