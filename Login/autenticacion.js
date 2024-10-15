@@ -14,10 +14,11 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             if (user) {
                 // Guarda la información del usuario en localStorage (opcional)
                 localStorage.setItem('userRole', user.Cargo);
+                localStorage.setItem('nombreUsuario', user.Nombre);
                 
 
                 // Redirige a la página principal
-                window.location.href = "/Inicio/Inicio.html"; // Cambia por la ruta de tu página principal
+                window.location.href = "/Inicio/Inicio.html"; 
             } else {
                 // Si las credenciales no coinciden, muestra una alerta
                 Swal.fire({

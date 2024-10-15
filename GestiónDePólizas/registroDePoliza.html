@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/style/style.css" />
   </head>
 
-  <body class="d-flex flex-column min-vh-100 main">
+  <body class="d-flex flex-column min-vh-100">
     <header class="navegacion">
       <div class="container-fluid">
         <!-- Cambiado a container-fluid -->
@@ -58,9 +58,11 @@
                           href="/Inicio/Inicio.html"
                           ><i class="bi bi-house-fill"></i> Inicio</a
                         >
+                        <li><a class="dropdown-item opcion_menu" href="/gestiónAseguradora/gestiónAseguradora.html"><i class="bi bi-building-fill-check"></i> Compañias de Seguros</a></li>
+
                       </li>
                       <li><hr class="dropdown-divider text-bg-light" /></li>
-                      <li>
+                      <li id="gestionUsuariosItem" style="display: none">
                         <a
                           class="dropdown-item opcion_menu"
                           href="/gestiónUsuarios/gestiónUsuarios.html"
@@ -109,56 +111,117 @@
         <div class="row p-4"></div>
       </div>
 
-      <!-- Acciones de gestión de Usuarios -->
+      <!-- Formulario de Registro de Pólizas -->
       <div class="row">
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
         <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
           <div class="card shadow">
             <h5 class="card-header barra">
-              <i class="bi bi-person-lines-fill"></i> Lista de Usuarios
+              <i class="bi bi-pencil-square"></i> Registro de Póliza
             </h5>
-
             <div class="card-body selector">
-              <div class="container">
-                <div class="table-responsive">
-                  <table
-                    class="table table-striped text-center shadow"
-                    id="tablaUsuarios"
-                  >
-                    <thead>
-                      <tr>
-                        <th scope="col">Seleccionar</th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col">Contraseña</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Cargo</th>
-                      </tr>
-                    </thead>
-                    <tbody id="cuerpoTablaUsuario"></tbody>
-                  </table>
-                </div>
+              <div class="input-group shadow">
+                <span class="input-group-text">Número de Póliza</span>
+                <input
+                  type="text"
+                  aria-label="Número de Póliza"
+                  class="form-control"
+                  placeholder="1234567890"
+                  id="numeroPoliza"
+                />
               </div>
-              <span></span><br />
-              <div class="text-center" id="btn-gestionUsuarios">
-                <a
-                  id="btn-registroUsuario"
-                  href="#"
-                  class="btn btn-primary shadow"
-                  >Registrar</a
+
+              <div class="input-group">
+                <span class="input-group-text">Compañia de Seguro</span>
+                <a id="btn-regisAsegura" href="#" class="btn botones shadow"
+                  >Registrar Compañia</a
                 >
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  id="companiaSeguro"
+                >
+                  <option selected>Selecciona una compañía aseguradora</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text">Tipo de Póliza</span>
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  id="tipoPoliza"
+                >
+                  <option selected>Selección</option>
+                  <option value="Póliza de vida">Póliza de vida</option>
+                  <option value="Póliza de transporte">
+                    Póliza de transporte
+                  </option>
+                  <option value="Pyme Todo Riesgo">
+                    Póliza de Pyme Todo Riesgo
+                  </option>
+                </select>
+              </div>
+
+              <div class="input-group shadow">
+                <span class="input-group-text">Monto de Cobertura $</span>
+                <input
+                  type="text"
+                  aria-label="Cobertura"
+                  class="form-control"
+                  placeholder="123.456,78"
+                  id="montoCobertura"
+                />
+              </div>
+
+              <div class="input-group shadow">
+                <span class="input-group-text">Fecha de inicio</span>
+                <input
+                  type="date"
+                  aria-label="Fecha Inicio"
+                  class="form-control"
+                  id="fechaInicio"
+                />
+              </div>
+              <div class="input-group shadow">
+                <span class="input-group-text">Fecha de vencimiento</span>
+                <input
+                  type="date"
+                  aria-label="Fecha de Vencimiento"
+                  class="form-control"
+                  id="fechaVencimiento"
+                />
+              </div>
+              <div class="input-group shadow">
+                <span class="input-group-text">Descripción</span>
+                <textarea
+                  name="Descripción"
+                  id="descripcion"
+                  cols="97"
+                  rows="2"
+                  placeholder="300 Carácteres..."
+                ></textarea>
+              </div>
+              <div class="input-group shadow">
+                <span class="input-group-text">Usuario Responsable</span>
+                <input
+                  type="text"
+                  aria-label="Usuario Responsable"
+                  class="form-control"
+                  placeholder="pablo..."
+                  id="usuarioResponsable"
+                />
+              </div>
+
+              <div class="text-center">
                 <a
-                  id="btn-modificarUsuario"
+                  id="btn-guardarPoliza"
                   href="#"
                   class="btn btn-secondary shadow"
-                  >Modificar</a
+                  onclick="registrarPoliza()"
+                  >Guardar</a
                 >
-                <a
-                  id="btn-eliminarUsuario"
-                  href="#"
-                  class="btn btn-danger shadow"
-                  >Eliminar</a
-                >
+
                 <a href="/Inicio/Inicio.html" class="btn btn-primary shadow"
                   >Volver</a
                 >
@@ -168,17 +231,12 @@
         </div>
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
       </div>
-      <!-- Espacio en blanco-->
-      <div class="container-fluid">
-        <div class="row p-4"></div>
-      </div>
 
-      <!-- Espacio en blanco-->
+      <!--Espacio en blanco-->
       <div class="container-fluid">
         <div class="row p-4"></div>
       </div>
     </main>
-
     <footer class="pie">
       <!--Pie de página-->
       <div class="container-fluid mt-auto">
@@ -234,7 +292,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Archivo JS principal -->
-    <script src="/gestiónUsuarios/logicaUsuarios.js"></script>
+    <script src="/GestiónDePólizas/JS/logicaRegistrar.js"></script>
+
+    <script src="/main.js"></script>
     <script>
       // logica prara que se vea el nombre de quien inicio sesión
       document.addEventListener("DOMContentLoaded", function () {

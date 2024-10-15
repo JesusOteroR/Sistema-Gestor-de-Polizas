@@ -38,15 +38,17 @@
                       <li>
                           <a class="dropdown-item opcion_menu" href="#">
                               <i class="bi bi-person-circle"></i>
-                              <span id="nombreUsuario">Nombre de Usuario</span>
+                              <span id="nombreUsuario"></span>
                           </a>
                       </li>
                       <li><a class="dropdown-item opcion_menu" href="/Inicio/Inicio.html"><i class="bi bi-house-fill"></i> Inicio</a></li>
+                      <li><a class="dropdown-item opcion_menu" href="/gestiónAseguradora/gestiónAseguradora.html"><i class="bi bi-building-fill-check"></i> Compañias de Seguros</a></li>
+
                       <li><hr class="dropdown-divider text-bg-light"></li>
                       <li id="gestionUsuariosItem" style="display: none;">
                           <a class="dropdown-item opcion_menu" href="/gestiónUsuarios/gestiónUsuarios.html"><i class="bi bi-person-circle"></i> Gestión de Usuarios</a>
                       </li>
-                      <li><a class="dropdown-item opcion_menu" href="/index.html"><i class="bi bi-box-arrow-left"></i> Salir</a></li>
+                      <li><a class="dropdown-item opcion_menu" href="/index.html" onclick="localStorage.clear()"><i class="bi bi-box-arrow-left"></i> Salir</a></li>
                   </ul>
               </li>
           </ul>
@@ -107,7 +109,7 @@
             <div class="card-body selector">
               <h5 class="card-title"><i class="bi bi-card-list"></i> Lista de Pólizas</h5>
               <p class="card-text">En esta sección se presenta el catálogo completo de las pólizas administradas por la empresa.</p>
-              <a href="/GestióDePólizas/listaPóliza.html" class="btn botones shadow">Ver</a>
+              <a href="/GestiónDePólizas/listaPóliza.html" class="btn botones shadow">Ver</a>
             </div>
           </div>
         </div>
@@ -116,7 +118,7 @@
             <div class="card-body selector">
               <h5 class="card-title"><i class="bi bi-pencil-square"></i> Registrar Nueva Póliza</h5>
               <p class="card-text">En la sección podrás registrar la información de las nuevas pólizas que la empresa contrate.</p>
-              <a href="/GestióDePólizas/registroDePoliza.html" class="btn botones shadow">Entrar</a>
+              <a href="/GestiónDePólizas/registroDePoliza.html" class="btn botones shadow">Entrar</a>
             </div>
           </div>
         </div>
@@ -125,7 +127,7 @@
             <div class="card-body selector">
               <h5 class="card-title"><i class="bi bi-megaphone-fill"></i> Seguimiento a Reclamaciones</h5>
               <p class="card-text">En esta sección, se puede hacer seguimiento al estado de una reclamacion por siniestro de una poliza contratada por la empresa </p>
-              <a href="/GestióDePólizas/Reclamaciones.html" class="btn botones shadow">Entrar</a>
+              <a href="/GestiónDePólizas/Reclamaciones.html" class="btn botones shadow">Entrar</a>
             </div>
           </div>
         </div>
@@ -194,6 +196,16 @@
       timer: 3000
     });
   });
+
+
+    // logica prara que se vea el nombre de quien inicio sesión
+  document.addEventListener('DOMContentLoaded', function() {
+    const nombreUsuario = localStorage.getItem('nombreUsuario');
+    if (nombreUsuario) {
+        document.getElementById('nombreUsuario').textContent = nombreUsuario;
+    }
+});
+
 </script>
 
     <script src="/main.js"></script>

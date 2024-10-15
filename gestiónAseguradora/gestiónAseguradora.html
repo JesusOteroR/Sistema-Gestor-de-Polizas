@@ -58,6 +58,8 @@
                           href="/Inicio/Inicio.html"
                           ><i class="bi bi-house-fill"></i> Inicio</a
                         >
+                        <li><a class="dropdown-item opcion_menu" href="/gestiónAseguradora/gestiónAseguradora.html"><i class="bi bi-building-fill-check"></i> Compañias de Seguros</a></li>
+
                       </li>
                       <li><hr class="dropdown-divider text-bg-light" /></li>
                       <li>
@@ -109,13 +111,13 @@
         <div class="row p-4"></div>
       </div>
 
-      <!-- Acciones de gestión de Usuarios -->
+      <!-- Acciones de gestión de Aseguradoras -->
       <div class="row">
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
         <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
           <div class="card shadow">
             <h5 class="card-header barra">
-              <i class="bi bi-person-lines-fill"></i> Lista de Usuarios
+              <i class="bi bi-building-fill-check"></i> Lista de Compañia de Seguros
             </h5>
 
             <div class="card-body selector">
@@ -128,33 +130,32 @@
                     <thead>
                       <tr>
                         <th scope="col">Seleccionar</th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col">Contraseña</th>
+                        <th scope="col">NIT</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Cargo</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Dirección</th>
                       </tr>
                     </thead>
-                    <tbody id="cuerpoTablaUsuario"></tbody>
+                    <tbody id="cuerpoTablaAseguradora"></tbody>
                   </table>
                 </div>
               </div>
               <span></span><br />
               <div class="text-center" id="btn-gestionUsuarios">
                 <a
-                  id="btn-registroUsuario"
+                  id="btn-registroAseguradora"
                   href="#"
                   class="btn btn-primary shadow"
                   >Registrar</a
                 >
                 <a
-                  id="btn-modificarUsuario"
+                  id="btn-modificarAseguradora"
                   href="#"
                   class="btn btn-secondary shadow"
                   >Modificar</a
                 >
                 <a
-                  id="btn-eliminarUsuario"
+                  id="btn-eliminarAseguradora"
                   href="#"
                   class="btn btn-danger shadow"
                   >Eliminar</a
@@ -234,7 +235,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Archivo JS principal -->
-    <script src="/gestiónUsuarios/logicaUsuarios.js"></script>
+    <script src="/gestiónAseguradora/logicaAseuradora.js"></script>
     <script>
       // logica prara que se vea el nombre de quien inicio sesión
       document.addEventListener("DOMContentLoaded", function () {
